@@ -1,7 +1,7 @@
 function FindProxyForURL(url, host) {
 
     // use proxy for specific domains
-    if (dnsDomainIs(host, "*.goguardian.*")||dnsDomainIs(host, "goguardian.*.*")||dnsDomainIs(host, "*.goguardian.*.*")||dnsDomainIs(host, "*.pusher.com")||dnsDomainIs(host, "*goguardian.*.*")){
+    if (shExpMatch(host, "*.goguardian.*")||shExpMatch(host, "goguardian.*.*")||shExpMatch(host, "*.goguardian.*.*")||shExpMatch(host, "*.pusher.com")||shExpMatch(host, "*goguardian.*.*")){
         return "PROXY 0.0.0.0:8080";
 		}
 		else{
